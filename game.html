@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Flip Card Memory Game</title>
+    <meta name="description" content="A fun flip card memory game with trivia questions.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Concert+One|Nova+Slim">
+    <link rel="stylesheet" href="game.css"> <!-- Updated path for standalone use -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="game-title">Flippy</h1>
+        </header>
+
+        <section class="score-table">            
+                <span class="moves">Moves: <span class="moves-count">0</span></span>
+                <span class="timer">Elapsed Time: <span class="time-count">0:00</span></span>
+            <button class="restart" aria-label="Restart Game">
+                <i class="fa fa-repeat"></i>
+            </button>
+        </section>
+
+        <main>
+            <ul class="deck">
+                <!-- Cards will be dynamically injected here by JavaScript -->
+            </ul>
+        </main>
+
+        <!-- Trivia Question Modal -->
+        <div class="modal trivia-modal">
+            <div class="modal-content">
+                <button class="close-button" aria-label="Close modal">x</button>
+                <h2>Trivia Question</h2>
+                <p class="question">Question text will appear here.</p>
+                <div class="options">
+                    <!-- Answer options will be dynamically injected here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Over Modal -->
+        <div class="modal game-over-modal">
+            <div class="modal-content">
+                <i class="fa fa-check-circle tick"></i>
+                <h1 class="modal-heading">Congratulations! You Won!</h1>
+                <div class="stats">
+                    <p>Moves Taken: <span class="final-moves">0</span></p>
+                    <p>Total Time: <span class="final-time">0:00</span></p>
+                    <p>Star Rating: <span class="final-stars">3 Stars</span></p>
+                </div>
+                <button class="new-game">Play Again</button>
+                <button class="main-menu" onclick="goToMainMenu()">Main Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script> <!-- Updated path for standalone use -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Card Memory Game - Start Menu</title>
+    <link rel="stylesheet" href="game.css"> <!-- Link to your existing CSS file for global styles -->
+    <link rel="stylesheet" href="main.css"> <!-- Link to the new start page CSS -->
+</head>
+<body>
+    <div class="start-container">
+        <header>
+            <h1>Welcome to Flippy!</h1>
+        </header>
+        <section class="start-menu">
+            <button class="start-game-button" onclick="startGame()">Start Game</button>
+        </section>
+    </div>
+
+    <script>
+        function startGame() {
+            window.location.href = "game.html"; // Redirect to the game page
+        }
+    </script>
+</body>
+</html>
