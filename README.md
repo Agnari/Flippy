@@ -1,6 +1,6 @@
 # FLIPPY
 
-Welcome to the **Flippy**! This game combines the fun of matching cards with the challenge of answering trivia questions. Match all the pairs and test your trivia knowledge!
+Welcome to the **FLIPPY**! This game combines the fun of matching cards with the challenge of answering trivia questions. Match all the pairs and test your trivia knowledge!
 
 ## Table of Contents
 
@@ -74,9 +74,12 @@ This project is built with JavaScript, HTML, and CSS. Here is a brief overview o
   function cardsMatch(card1, card2) { ... }
   ```
 
-## License
+## Sources
 
-This project is open source and available under the [MIT License](LICENSE). Feel free to use, modify, and distribute this game as you see fit.
+This project utilized the following sources:
+
+1. **Main Game Logic**: Inspired by a tutorial from [Code With Faraz](https://www.codewithfaraz.com/content/112/creating-flip-card-memory-game-with-html-css-and-javascript).
+2. **Trivia API**: Trivia questions are provided by the [Open Trivia Database API](https://opentdb.com/).
 
 ---
 
