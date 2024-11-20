@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Flip Card Memory Game</title>
@@ -10,15 +11,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Concert+One|Nova+Slim">
     <link rel="stylesheet" href="game.css"> <!-- Updated path for standalone use -->
 </head>
+
 <body>
     <div class="container">
         <header>
             <h1 class="game-title">Flippy</h1>
         </header>
 
-        <section class="score-table">            
-                <span class="moves">Moves: <span class="moves-count">0</span></span>
-                <span class="timer">Elapsed Time: <span class="time-count">0:00</span></span>
+        <section class="score-table">
+            <span class="moves">Moves: <span class="moves-count">0</span></span>
+            <span class="timer">Time left: <span class="time-count">0:00</span></span>
             <button class="restart" aria-label="Restart Game">
                 <i class="fa fa-repeat"></i>
             </button>
@@ -30,10 +32,20 @@
             </ul>
         </main>
 
+        <!-- Difficulty Selection Modal -->
+        <div class="modal difficulty-modal show-modal">
+            <div class="modal-content">
+                <h2>Select Difficulty</h2>
+                <button class="difficulty-button" data-difficulty="easy">Easy</button>
+                <button class="difficulty-button" data-difficulty="normal">Normal</button>
+                <button class="difficulty-button" data-difficulty="hard">Hard</button>
+            </div>
+        </div>
+
         <!-- Trivia Question Modal -->
         <div class="modal trivia-modal">
             <div class="modal-content">
-                <button class="close-button" aria-label="Close modal">x</button>
+                <div class="countdown-bar"></div> <!-- Countdown bar added here -->
                 <h2>Trivia Question</h2>
                 <p class="question">Question text will appear here.</p>
                 <div class="options">
@@ -46,11 +58,10 @@
         <div class="modal game-over-modal">
             <div class="modal-content">
                 <i class="fa fa-check-circle tick"></i>
-                <h1 class="modal-heading">Congratulations! You Won!</h1>
+                <h1 class="modal-heading"></h1>
                 <div class="stats">
                     <p>Moves Taken: <span class="final-moves">0</span></p>
                     <p>Total Time: <span class="final-time">0:00</span></p>
-                    <p>Star Rating: <span class="final-stars">3 Stars</span></p>
                 </div>
                 <button class="new-game">Play Again</button>
                 <button class="main-menu" onclick="goToMainMenu()">Main Menu</button>
@@ -60,4 +71,5 @@
 
     <script src="game.js"></script> <!-- Updated path for standalone use -->
 </body>
+
 </html>
