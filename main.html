@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flip Card Memory Game - Start Menu</title>
+    <title>Flippy</title>
     <link rel="stylesheet" href="game.css"> <!-- Link to your existing CSS file for global styles -->
     <link rel="stylesheet" href="main.css"> <!-- Link to the new start page CSS -->
 </head>
@@ -14,6 +14,8 @@
         </header>
         <section class="start-menu">
             <button class="start-game-button" onclick="startGame()">Start Game</button>
+            <button class="login-button" id="loginBtn" onclick="goToLogin()">Login</button>
+            <button class="account-button" id="accountBtn" onclick="goToAccount()" style="display: none;">Account</button>
         </section>
     </div>
 
@@ -21,6 +23,23 @@
         function startGame() {
             window.location.href = "game.html"; // Redirect to the game page
         }
+
+        function goToLogin() {
+            window.location.href = "login_registration.html"; // Redirect to the login page
+        }
+
+        function goToAccount() {
+            window.location.href = "account.html"; // Redirect to the account page
+        }
+
+        // Check if the user is logged in
+        document.addEventListener("DOMContentLoaded", () => {
+            const authToken = localStorage.getItem("authToken");
+            if (authToken) {
+                document.getElementById("loginBtn").style.display = "none";
+                document.getElementById("accountBtn").style.display = "inline-block";
+            }
+        });
     </script>
 </body>
 </html>

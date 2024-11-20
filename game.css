@@ -203,8 +203,15 @@
 
 .game-over-modal .modal-heading {
   font-size: 2.5rem;
-  color: #4caf50;
   margin-bottom: 1rem;
+}
+
+.game-over-modal .modal-heading.win {
+  color: #4caf50;
+}
+
+.game-over-modal .modal-heading.lose {
+  color: #ff0000;
 }
 
 .game-over-modal .stats {
@@ -235,3 +242,42 @@
 .game-over-modal .new-game:hover, .main-menu:hover {
   background-color: #836fff;
 }
+
+/* Difficulty Selection Modal Specific Styling */
+.difficulty-modal .modal-content {
+  background-color: #f0f0f7;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.difficulty-modal h2 {
+  font-size: 2rem;
+  color: #333366;
+  margin-bottom: 1.5rem;
+}
+
+.difficulty-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  background-color: #6a5acd;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 0.5rem;
+}
+
+.difficulty-button:hover {
+  background-color: #836fff;
+  transform: scale(1.05);
+}
+
+.countdown-bar {
+  height: 10px;
+  background-color: #4caf50; /* Green color for the countdown */
+  transition: width 0.1s linear;
+}
+
