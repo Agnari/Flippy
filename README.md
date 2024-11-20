@@ -20,7 +20,10 @@ This project is a simple yet entertaining card memory game where players need to
 - **Card Matching**: Flip and match pairs of cards.
 - **Trivia Questions**: Randomly triggered trivia questions after each successful match. Correct answers give players a peek at all unmatched cards.
 - **Timer and Move Counter**: Keep track of your game duration and number of moves.
+- **Difficulties**: 3 main difficulties that change how much time players have got to solve the puzzle and questions.
 - **Responsive UI**: Modals for trivia and game-over events, along with user-friendly prompts.
+- **Accounts**: Users can now create personal accounts to track their game statistics and save their progress.
+- **Statistics**: Personal statistics coming soon!
 
 ## Installation
 
@@ -37,8 +40,18 @@ No additional dependencies are required.
 1. **Start the Game**: Click on a card to begin. The timer will start after your first click.
 2. **Match Cards**: Try to find and match pairs of cards.
 3. **Trivia Challenge**: After matching a pair, a trivia question may appear. Answer correctly to reveal all unmatched cards for a moment.
-4. **Win Condition**: Match all pairs to win the game. Your statistics, such as the number of moves and time taken, will be displayed upon winning.
+4. **Win Condition**: Match all pairs to win the game withing certain time. Your statistics, such as the number of moves and time taken, will be displayed upon winning.
 5. **Restart the Game**: You can restart at any time using the "Restart" button, or start a new game after finishing by clicking the "New Game" button.
+
+## Difficulty Levels
+
+**FLIPPY** offers three different difficulty levels, each affecting the time available for solving trivia questions and completing the flip-card game.
+
+| Difficulty Level | Card Matching Time Limit | Trivia Question Time Limit |
+|------------------|--------------------------|----------------------------|
+| Easy             | 60 seconds               | 20 seconds                 |
+| Normal           | 45 seconds               | 15 seconds                 |
+| Hard             | 30 seconds               | 10 seconds                 |
 
 ## Code Overview
 
