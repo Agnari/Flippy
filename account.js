@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (authToken) {
         try {
             // Fetch user details from the backend
-            const response = await fetch("https://localhost:7045/api/User/username", {
+            const userResponse = await fetch("https://localhost:7045/api/User/username", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -12,17 +12,41 @@ document.addEventListener("DOMContentLoaded", async () => {
                 }
             });
 
-            if (response.ok) {
-                const userData = await response.json();
+            if (userResponse.ok) {
+                const userData = await userResponse.json();
 
                 // Update the DOM with user data
                 document.getElementById("username").textContent = userData.username || "User";
-            } else if (response.status === 401) {
+
+                // Fetch user statistics from the backend
+                const statsResponse = await fetch("https://localhost:7045/api/Game/statistics", {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${authToken}`
+                    }
+                });
+
+                if (statsResponse.ok) {
+                    const statsData = await statsResponse.json();
+
+                    // Update the DOM with user statistics data
+                    document.getElementById("best-score").textContent = statsData.bestScore || 0;
+                    document.getElementById("fastest-game").textContent = statsData.shortestTime || "0s";
+                    document.getElementById("fastest-moves").textContent = statsData.shortestMoves || 0;
+                    document.getElementById("total-trivia-answered").textContent = statsData.answeredTriviaPercentage.toFixed(2) + "%" || 0;
+                    document.getElementById("win-percentage").textContent = statsData.winPercentage.toFixed(2) + "%" || 0;
+                } else {
+                    console.error("Error fetching user statistics:", statsResponse.statusText);
+                    alert("Unable to load user statistics.");
+                }
+
+            } else if (userResponse.status === 401) {
                 // Unauthorized, token might be invalid or expired
                 alert("Session expired. Please log in again.");
                 logout();
             } else {
-                console.error("Error fetching user details:", response.statusText);
+                console.error("Error fetching user details:", userResponse.statusText);
                 alert("Unable to load user information.");
             }
         } catch (err) {

@@ -21,6 +21,7 @@
         <section class="score-table">
             <span class="moves">Moves: <span class="moves-count">0</span></span>
             <span class="timer">Time left: <span class="time-count">0:00</span></span>
+            <span class="points">Score: <span class="points-count">0</span></span>
             <button class="restart" aria-label="Restart Game">
                 <i class="fa fa-repeat"></i>
             </button>
@@ -31,6 +32,7 @@
                 <!-- Cards will be dynamically injected here by JavaScript -->
             </ul>
         </main>
+
 
         <!-- Difficulty Selection Modal -->
         <div class="modal difficulty-modal show-modal">
@@ -55,21 +57,27 @@
         </div>
 
         <!-- Game Over Modal -->
+        <!-- Game Over Modal -->
         <div class="modal game-over-modal">
             <div class="modal-content">
                 <i class="fa fa-check-circle tick"></i>
                 <h1 class="modal-heading"></h1>
                 <div class="stats">
                     <p>Moves Taken: <span class="final-moves">0</span></p>
-                    <p>Total Time: <span class="final-time">0:00</span></p>
+                    <p>Time Taken: <span class="final-time">0:00</span></p>
+                    <p>Bonus Points for Time: <span class="bonus-points">0</span></p>
+                    <p>Total Score: <span class="final-points">0</span></p>
+                </div>
+                <div class="top-scores">
+                    <!-- Top 3 Scores will be dynamically injected here by JavaScript -->
                 </div>
                 <button class="new-game">Play Again</button>
                 <button class="main-menu" onclick="goToMainMenu()">Main Menu</button>
             </div>
         </div>
-    </div>
 
-    <script src="game.js"></script> <!-- Updated path for standalone use -->
+
+        <script src="game.js"></script> <!-- Updated path for standalone use -->
 </body>
 
 </html>

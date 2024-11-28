@@ -8,7 +8,6 @@ Welcome to the **FLIPPY**! This game combines the fun of matching cards with the
 - [Features](#features)
 - [Installation](#installation)
 - [How to Play](#how-to-play)
-- [Code Overview](#code-overview)
 - [License](#license)
 
 ## Game Description
@@ -20,10 +19,10 @@ This project is a simple yet entertaining card memory game where players need to
 - **Card Matching**: Flip and match pairs of cards.
 - **Trivia Questions**: Randomly triggered trivia questions after each successful match. Correct answers give players a peek at all unmatched cards.
 - **Timer and Move Counter**: Keep track of your game duration and number of moves.
+- **Statistics**: Beat your own scores and become a pro in memorizing and learning.
 - **Difficulties**: 3 main difficulties that change how much time players have got to solve the puzzle and questions.
 - **Responsive UI**: Modals for trivia and game-over events, along with user-friendly prompts.
 - **Accounts**: Users can now create personal accounts to track their game statistics and save their progress.
-- **Statistics**: Personal statistics coming soon!
 
 ## Installation
 
@@ -33,7 +32,7 @@ This project is a simple yet entertaining card memory game where players need to
    ```
 2. Open the `index.html` file in your browser to start the game.
 
-No additional dependencies are required.
+3. Back-end is available at Flippy.api repository. You will also need database, if you want your accounts to work.
 
 ## How to Play
 
@@ -52,40 +51,6 @@ No additional dependencies are required.
 | Easy             | 60 seconds               | 20 seconds                 |
 | Normal           | 45 seconds               | 15 seconds                 |
 | Hard             | 30 seconds               | 10 seconds                 |
-
-## Code Overview
-
-This project is built with JavaScript, HTML, and CSS. Here is a brief overview of the main functions:
-
-### JavaScript Functions
-
-- **Shuffle Function**: Randomizes the card order.
-  ```js
-  function shuffle(array) { ... }
-  ```
-- **Modals and Event Listeners**: Manages the trivia and game-over modals, and closes them when necessary.
-  ```js
-  const modal = document.querySelector(".modal.trivia-modal");
-  closeButton.forEach(button => { ... });
-  ```
-- **Trivia Fetching**: Retrieves a trivia question from the Open Trivia Database API.
-  ```js
-  async function fetchTriviaQuestion() { ... }
-  ```
-- **Display Trivia Question**: Presents the trivia question to the player and evaluates their answer.
-  ```js
-  function displayTriviaQuestion(question, options, correctAnswer) { ... }
-  ```
-- **Game Initialization and Restart**: Initializes the game and handles restart functionality.
-  ```js
-  function initGame() { ... }
-  function restartGame() { ... }
-  ```
-- **Card Handling**: Functions to handle card flipping, matching, and displaying unmatched cards.
-  ```js
-  function addCard(card, cardHTML, testList, pos) { ... }
-  function cardsMatch(card1, card2) { ... }
-  ```
 
 ## Sources
 

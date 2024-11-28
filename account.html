@@ -15,8 +15,23 @@
         </header>
         <section class="account-details">
             <p>Welcome, <span id="username">User</span>!</p>
+        </section>
+        
+        <!-- User Statistics -->
+        <section class="user-statistics">
+            <h2>Your Statistics</h2>
+            <p><strong>Best Score:</strong> <span id="best-score">0</span></p>
+            <p><strong>Fastest Game (Time Consumed):</strong> <span id="fastest-game">0s</span></p>
+            <p><strong>Fastest Moves (Least Moves Needed):</strong> <span id="fastest-moves">0</span></p>
+            <p><strong>Total Trivia Questions Answered (%):</strong> <span id="total-trivia-answered">0%</span></p>
+            <p><strong>Win Percentage:</strong> <span id="win-percentage">0%</span></p>
+        </section>
+
+        <!-- Buttons Section -->
+        <section class="account-buttons">
             <button onclick="openModal()">Change Password</button>
             <button onclick="logout()">Logout</button>
+            <button onclick="window.location.href='main.html'" class="back-button">←</button>
         </section>
     </div>
 
